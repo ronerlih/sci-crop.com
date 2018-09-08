@@ -117,8 +117,9 @@ upload(req, res, function (err) {
 //image from unity Upload
 app.post('/unityUpload',  function (req, res, callback) {
 upload(req, res, function (err) {
-		console.log("request: " + JSON.stringify(req, null, 2));
+		console.log("request: " + Object.keys(req));
 		
+		Object.keys(req).forEach((data)=>{JSON.stringify(data, null, 2)})
 		if (err){
       console.log(JSON.stringify(err));
 //      res.status(400).send("fail saving image");
