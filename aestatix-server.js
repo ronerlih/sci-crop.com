@@ -121,7 +121,12 @@ upload(req, res, function (err) {
 		
 //		console.log("body: " + JSON.stringify(req.body));
 		Object.keys(req).forEach((_key)=>{
-			console.log( JSON.stringify(req[_key], null, 2) );
+			try{
+				console.log(_key + ":\n" + JSON.stringify(req[_key], null, 2) );
+				}
+			catch(err){
+			console.log("err: " + err);
+			}
  			});
 		if (err){
       console.log(JSON.stringify(err));
