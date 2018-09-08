@@ -117,7 +117,7 @@ upload(req, res, function (err) {
 //image from unity Upload
 app.post('/unityUpload',  function (req, res, callback) {
 upload(req, res, function (err) {
-		console.log("request: " + req);
+		console.log("request: " + JSON.stringify(req, null, 2));
 		
 		if (err){
       console.log(JSON.stringify(err));
