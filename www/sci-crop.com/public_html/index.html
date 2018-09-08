@@ -86,7 +86,8 @@
 				//send messesge to unity (c#) object in - pixelProcessing.cs
 				//gameInstance.SendMessage("object-name","function-name",value)
 //				gameInstance.SendMessage("UnityCamera", "ImageFromWebServer", responseText);
-				gameInstance.SendMessage("UnityCamera", "ImageFromWebServer",'http://localhost:3000/uploads/' + responseText);
+//				gameInstance.SendMessage("UnityCamera", "ImageFromWebServer",'http://localhost:3000/uploads/' + responseText);
+				gameInstance.SendMessage("UnityCamera", "ImageFromWebServer",'https://sci-crop.com/uploads/' + responseText);
 				$('#clearImage').attr("onclick", 'clearImage()');
 				$('#clearImage').show();
 //				alert('status: ' + statusText + '\n\nresponseText: \n' + responseText );
