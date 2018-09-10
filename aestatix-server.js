@@ -116,7 +116,6 @@ upload(req, res, function (err) {
 
 //image from unity Upload
 app.post('/unityUpload',  function (req, res, callback) {
-upload(req, res, function (err) {
 //		console.log("request: " + Object.keys(req));
 		
 //		console.log("body: " + JSON.stringify(req.body));
@@ -128,20 +127,16 @@ upload(req, res, function (err) {
 			console.log("err: " + err);
 			}
  			});
-		if (err){
-      console.log(JSON.stringify(err));
-//      res.status(400).send("fail saving image");
-    } else {
-//		callback(console.log('callback: ' + lastImageName));
-		callback(console.log('image uploaded to: ' +lastImageName + '\n' + 
-													'from (client service location): ' + req.ip));
-		res.send(lastImageName);
-		setTimeout(
-			function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + lastImageName);
-							console.log('image '+ lastImageName+ ' earased');
-							},5000);
+			
+			if (err){
+				console.log(JSON.stringify(err));
+		//      res.status(400).send("fail saving image");
+			 } else {
+		//		callback(console.log('callback: ' + lastImageName));
+				callback(console.log('image uploaded from (client service location): ' + req.ip));
+				res.send("success");
+
 	 		}		
-	});
 //	console.log("req.file.originalname: " + lastImagePath.file);
 //    res.redirect('/');
 });
