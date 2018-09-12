@@ -19,7 +19,7 @@
     <style>
       body{color:cornflowerblue; margin:0;padding:0;}
 			#gameContainer{border:  2px solid cornflowerblue !important; 
-			transform: scale(1) ; margin:auto;}
+			transform: scale(1) ; margin:auto;font-family: sans-serif;}
 		.center{margin:auto!important;}
 		.upload-container{width:640px;padding-top:10px;}
 		input[name~="submit"] , input[name~="img"], #clearImage {margin:5px;}
@@ -128,7 +128,7 @@
 			$('#download').html('');
 			
 //			$('#download').append('<img class="downloads" src="http://localhost:3000/uploads/' + url1 + '.jpeg" >');
-			$('#download').append('<table><tr><td><span>psyKrop smart image </span></td><td><span>psyKrop smart image with data </span></td><td><span>psyKrop smart image heatmap </span></td></tr><tr><td><a download="psyKrop-image.jpeg" href="' + server + '/uploads/' + url1 + '.jpeg" title="psyKrop smart image"><img class="downloads" alt="psyKrop smart image" src="' + server + '/uploads/' + url1 + '.jpeg"></a></td><td><a download="psyKrop-image-data.jpeg" href="' + server + '/uploads/' + url2 + '.jpeg" title="psyKrop smart image with data"><img class="downloads" alt="psyKrop image /w data" src="' + server + '/uploads/' + url2 + '.jpeg"></a></td><td><a download="psyKrop-image-heatmap.jpeg" href="' + server + '/uploads/' + url3 + '.jpeg" title="psyKrop heapmap image"><img class="downloads" alt="psyKrop heatmap image" src="' + server + '/uploads/' + url3 + '.jpeg"></a></td></td></table>');
+			$('#download').append('<div>click to download</div><hr><table><tr><td><span>psyKrop smart image </span></td><td><span>psyKrop smart image with data </span></td><td><span>psyKrop smart image heatmap </span></td></tr><tr><td><a download="psyKrop-image.jpeg" href="' + server + '/uploads/' + url1 + '.jpeg" title="psyKrop smart image"><img class="downloads" alt="psyKrop smart image" src="' + server + '/uploads/' + url1 + '.jpeg"></a></td><td><a download="psyKrop-image-data.jpeg" href="' + server + '/uploads/' + url2 + '.jpeg" title="psyKrop smart image with data"><img class="downloads" alt="psyKrop image /w data" src="' + server + '/uploads/' + url2 + '.jpeg"></a></td><td><a download="psyKrop-image-heatmap.jpeg" href="' + server + '/uploads/' + url3 + '.jpeg" title="psyKrop heapmap image"><img class="downloads" alt="psyKrop heatmap image" src="' + server + '/uploads/' + url3 + '.jpeg"></a></td></td></table>');
 		}
 		function unityProgressDone(){
 						$('.ui-console').text('..still working');
