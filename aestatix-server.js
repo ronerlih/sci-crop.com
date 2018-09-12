@@ -1,5 +1,4 @@
 var devmode = false;
-var Iconv  = require('iconv').Iconv;
 var jpeg = require('jpeg-js');
 var express = require('express');
 var fileUpload = require('express-fileupload');
