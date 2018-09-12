@@ -24,8 +24,6 @@ app.set('views', __dirname + '/www/sci-crop.com/public_html/');
 //use
 app.use(cors({origin: '*'}));
 //app.use(fileUpload());
-//serve static
-app.use(express.static('www/sci-crop.com/public_html/'));
 
 
 //iframe header response options
@@ -194,6 +192,9 @@ app.put('/unityUploadHeatmap',  function (req, res, callback) {
 //answer favicon request
 app.get('/favicon.ico', function (req, res) {
 }); 
+
+//serve static
+app.use(express.static('www/sci-crop.com/public_html/'));
 
 function logRequest(requestURL, requestQuary, requestIp){
 	now = new Date();
