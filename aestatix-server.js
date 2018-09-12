@@ -45,6 +45,7 @@ let imageHeatmapName;
 let ACK_HTTP_CODE = 200;
 var width = 640, height = 480;
 var frameData = new Buffer(width * height * 4);
+let twenty4HrsInMlsec = 360000 * 240;
 //console.log("path: " + __dirname + '/www/sci-crop.com/public_html/');
 var options = {
     root: __dirname + '/www/sci-crop.com/public_html/',
@@ -117,7 +118,7 @@ upload(req, res, function (err) {
 		setTimeout(
 			function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + lastImageName);
 							console.log('image '+ lastImageName+ ' earased');
-							},5000);
+							},360000 * 240);
 	 		}		
 	});
 //	console.log("req.file.originalname: " + lastImagePath.file);
@@ -142,7 +143,7 @@ app.put('/unityUpload',  function (req, res, callback) {
 			  
 			  setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageName + '.jpeg');
 							console.log('image '+ imageName+ ' earased');
-							},5000);
+							},twenty4HrsInMlsec);
 		});
 });
 
@@ -163,7 +164,7 @@ app.put('/unityUploadData',  function (req, res, callback) {
 			  
 			  setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageDataName + '.jpeg');
 				console.log('image '+ imageDataName+ ' earased');
-				},5000);
+				},twenty4HrsInMlsec);
 		});
 });
 
@@ -185,7 +186,7 @@ app.put('/unityUploadHeatmap',  function (req, res, callback) {
 			
 			setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageHeatmapName + '.jpeg');
 				console.log('image '+ imageHeatmapName+ ' earased');
-				},5000);
+				},twenty4HrsInMlsec);
 			});
 });
 
