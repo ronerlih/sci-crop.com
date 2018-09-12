@@ -77,11 +77,11 @@ var Storage = multer.diskStorage({
 //			 	console.log("file name:" + lastImageName);
          }
 				 
-				 if(devmode){
-				 	callback(null, __dirname + "/www/sci-crop.com/public_html/uploads");
-				 }else{
+//				 if(devmode){
+//				 	callback(null, __dirname + "/www/sci-crop.com/public_html/uploads");
+//				 }else{
 					 callback(null, "./www/sci-crop.com/public_html/uploads");
-				 }
+//				 }
      },
    filename: function(req, file, callback) {
          callback(null, lastImageName);
