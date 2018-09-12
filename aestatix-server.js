@@ -142,7 +142,7 @@ app.put('/unityUpload',  function (req, res, callback) {
 			  res.write('image name: ' + imageName);
 			  res.end();
 			  
-			  setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageName + '.jpeg');
+			  setTimeout(function(){	fs.unlinkSync('./www/sci-crop.com/public_html/uploads/' + imageName + '.jpeg');
 							console.log('image '+ imageName+ ' earased');
 							},5000);
 		});
