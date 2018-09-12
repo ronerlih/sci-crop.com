@@ -1,5 +1,4 @@
 var devmode = false;
-var jpeg = require('jpeg-js');
 var express = require('express');
 var fileUpload = require('express-fileupload');
 var path = require('path');
