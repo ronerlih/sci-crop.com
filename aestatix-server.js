@@ -11,7 +11,6 @@ var request = require('request');
 var cors = require('cors');
 var events = require('events');
 var multer = require('multer');
-var btoa = require('btoa');
 //var bodyParser = require('body-parser');
 //var xFrameOptions = require('x-frame-options');
 
