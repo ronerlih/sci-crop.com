@@ -115,7 +115,7 @@ upload(req, res, function (err) {
 //		callback(console.log('callback: ' + lastImageName));
 		callback(console.log('image uploaded to: ' +lastImageName + '\n' + 
 													'from (client service location): ' + req.ip));
-		res.send(lastImageName);
+//		res.send(lastImageName);
 		setTimeout(
 			function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + lastImageName);
 							console.log('image '+ lastImageName+ ' earased');
