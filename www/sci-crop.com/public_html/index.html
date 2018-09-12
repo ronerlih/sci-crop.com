@@ -30,7 +30,7 @@
     background: cornflowerblue;
     height: 1px;
     margin-top: 5px!important;
-    margin-bottom: 5px!important;}
+    margin-bottom: 5px!important	;}
 	 td span{font-size: 13px;}
     </style>
   </head>
@@ -45,8 +45,8 @@
 				<div class="upload-container">
 						<div id="file-upload" class="disabledElement">
 						<form id="frmUploader" enctype="multipart/form-data" action="/upload" method="post">
-							<input type="file" name="img" /><br>
-							<input type="submit" name="submit" id="btnSubmit" value="upload" /> 
+							<input type="file" name="img" onclick="showDownload()"/><br>
+							<input type="submit" class="disabledElement" name="submit" id="btnSubmit" value="upload" /> 
 						</form>
 						<button id="clearImage" >back to camera</button>
 						</div>
@@ -65,7 +65,6 @@
 
 //    $(document).ready(function() {
 			$('#clearImage').hide();
-			
 				
 			var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Aestatix-webGL-server-12-11-2017.json", {onProgress: UnityProgress});
 //			console.log("UnityProgress" + UnityProgress);
@@ -141,6 +140,9 @@
 						$('.ui-console').fadeIn();
 		}
 		
+		function showDownload(){
+					$('#btnSubmit').removeClass('disabledElement');
+		}
 
 </script>
 
