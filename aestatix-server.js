@@ -142,9 +142,9 @@ app.put('/unityUpload',  function (req, res, callback) {
 			  res.write('image name: ' + imageName);
 			  res.end();
 			  
-			  setTimeout(function(){	fs.unlinkSync('./www/sci-crop.com/public_html/uploads/' + imageName + '.jpeg');
-							console.log('image '+ imageName+ ' earased');
-							},5000);
+//			  setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageName + '.jpeg');
+//							console.log('image '+ imageName+ ' earased');
+//							},5000);
 		});
 });
 
@@ -163,9 +163,9 @@ app.put('/unityUploadData',  function (req, res, callback) {
 			  res.write('image name: ' + imageName);
 			  res.end();
 			  
-			  setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageDataName + '.jpeg');
-				console.log('image '+ imageDataName+ ' earased');
-				},5000);
+//			  setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageDataName + '.jpeg');
+//				console.log('image '+ imageDataName+ ' earased');
+//				},5000);
 		});
 });
 
@@ -185,9 +185,9 @@ app.put('/unityUploadHeatmap',  function (req, res, callback) {
 			res.write('image name: ' + imageName);
 			res.end();		
 			
-			setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageHeatmapName + '.jpeg');
-				console.log('image '+ imageHeatmapName+ ' earased');
-				},5000);
+//			setTimeout(function(){	fs.unlinkSync(__dirname + '/www/sci-crop.com/public_html/uploads/' + imageHeatmapName + '.jpeg');
+//				console.log('image '+ imageHeatmapName+ ' earased');
+//				},5000);
 			});
 });
 
