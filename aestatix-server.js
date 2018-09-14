@@ -92,6 +92,12 @@ const upload = multer({ storage: Storage ,fileFilter: imageFilter}).single('img'
 //root-home route
 app.get('/', function (req, res) {
 	//res.send("response..: Success!! ");
+	res.sendFile("login.html", options);
+	logRequest(req.protocol + '://' + req.get('host'),req.originalUrl,req.ip);
+});  
+//root-home route
+app.get('/login', function (req, res) {
+	//res.send("response..: Success!! ");
 	res.sendFile("index.html", options);
 	logRequest(req.protocol + '://' + req.get('host'),req.originalUrl,req.ip);
 });  
