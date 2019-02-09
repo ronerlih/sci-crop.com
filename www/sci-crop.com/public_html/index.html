@@ -32,6 +32,7 @@
     margin-top: 5px!important;
     margin-bottom: 5px!important	;}
 	 td span{font-size: 13px;}
+	 .fullscreen{text-align:right;}
     </style>
   </head>
   <body>
@@ -41,9 +42,9 @@
 		<div class="webgl-content"  style="margin-top:60px;" >
       	
 				<div id="gameContainer" class="center" style="width: 640px; height: 480px;">
-				<div id="fullscreen" onclick="gameInstance.SetFullscreen(1)">
-					<img src="images/fullscreen-64.png" width=40>
 				</div>
+				<div id="fullscreen" class="center " style=" text-align:right; width: 640px;" onclick="gameInstance.SetFullscreen(1)">
+					<img src="images/fullscreen-64.png" width=40>
 				</div>
 				<div class="upload-container">
 						<div id="file-upload" class="disabledElement">
