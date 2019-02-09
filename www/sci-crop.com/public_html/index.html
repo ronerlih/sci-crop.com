@@ -41,10 +41,10 @@
 
 		<div class="webgl-content"  style="margin-top:60px;" >
       	
-				<div id="gameContainer" class="center" style="width: 640px; height: 480px;">
+				<div id="gameContainer" class="center" style=" width: 640px; height: 480px;">
 				</div>
-				<div id="fullscreen" class="center " style=" text-align:right; width: 640px;" onclick="gameInstance.SetFullscreen(1)">
-					<img src="images/fullscreen-64.png" width=40>
+				<div id="fullscreen" class="center disabledElement" style="margin-top:5px!important; text-align:right; width: 640px;" onclick="gameInstance.SetFullscreen(1)">
+					<img src="images/fullscreen-64.png" width=30>
 				</div>
 				<div class="upload-container">
 						<div id="file-upload" class="disabledElement">
@@ -130,6 +130,7 @@
 				setTimeout(function(){
 								$('.ui-console').fadeOut();
 								$('#file-upload').removeClass('disabledElement');
+								$('#fullscreen').removeClass('disabledElement');
 				},2000);
 				
 		}
