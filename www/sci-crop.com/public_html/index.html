@@ -24,7 +24,8 @@
 		.upload-container{    width: 640px;
         margin-top: -35px;
     margin-right: auto;
-    margin-left: auto;}
+    margin-left: auto;
+	     text-align: left;}
 		input[name~="submit"] , input[name~="img"], #clearImage {margin:0px;margin-bottom:5px;}
 		.downloads{width:200px; margin:5px; border:2px solid cornflowerblue; }	
 		#download{width:100vw; }
@@ -36,14 +37,15 @@
     margin-bottom: 5px!important	;}
 	 td span{font-size: 13px;}
 	 .fullscreen{text-align:right;}
+	 .webgl-content{width:640px!important;}
     </style>
   </head>
   <body>
-
+<center>
 				<span class="ui-console"> still working</span>
 
 		<div class="webgl-content"  style="margin-top:60px;" >
-      	
+		</div>
 				<div id="gameContainer" class="center" style=" width: 640px; height: 480px;">
 				</div>
 				<div id="fullscreen" class="center disabledElement" style="margin-top:5px!important; text-align:right; width: 640px;" onclick="gameInstance.SetFullscreen(1)">
@@ -59,11 +61,10 @@
 						</form>
 						<button id="clearImage" >back to camera</button>
 						</div>
-						<center><div id="download"></div></center>
+						<div id="download"></div>
 				</div>
+</center>			
 				
-				
-    </div>
 		<br>	
 		
 
