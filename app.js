@@ -44,7 +44,7 @@ let imageDataName;
 let imageHeatmapName;
 let ACK_HTTP_CODE = 200;
 var width = 640, height = 480;
-var frameData = new Buffer(width * height * 4);
+//var frameData = new Buffer.alloc(width * height * 4);
 let twenty4HrsInMlsec = 360000 * 240;
 //console.log("path: " + __dirname + '/www/sci-crop.com/public_html/');
 var options = {
@@ -79,7 +79,7 @@ var Storage = multer.diskStorage({
 //				 if(devmode){
 //				 	callback(null, __dirname + "/www/sci-crop.com/public_html/uploads");
 //				 }else{
-					 callback(null, "./www/sci-crop.com/public_html/uploads");
+					 callback(null, __dirname + "/www/sci-crop.com/public_html/uploads");
 //				 }
      },
    filename: function(req, file, callback) {
@@ -111,6 +111,7 @@ app.get('/sandbox', function (req, res) {
 
 //file upload
 app.post('/upload',  function (req, res, callback) {
+console.log("upload route");
 upload(req, res, function (err) {
 
 		if (err){
@@ -201,7 +202,7 @@ app.get('/favicon.ico', function (req, res) {
 }); 
 
 //serve static
-app.use(express.static('/www/sci-crop.com/public_html/'));
+app.use(express.static('www/sci-crop.com/public_html/'));
 
 function logRequest(requestURL, requestQuary, requestIp){
 	now = new Date();
